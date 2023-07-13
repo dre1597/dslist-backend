@@ -1,40 +1,21 @@
 package com.devsuperior.dslist.dto;
 
-import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.entity.Game;
 
-public class GameMinDTO {
-
-	private Long id;
-	private String title;
-	private Integer year;
-	private String imgUrl;
-	private String shortDescription;
-	
-	public GameMinDTO(Game entity) {
-		id = entity.getId();
-		title = entity.getTitle();
-		year = entity.getYear();
-		imgUrl = entity.getImgUrl();
-		shortDescription = entity.getShortDescription();
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public Integer getYear() {
-		return year;
-	}
-
-	public String getImgUrl() {
-		return imgUrl;
-	}
-
-	public String getShortDescription() {
-		return shortDescription;
-	}
+public record GameMinDTO(
+    Long id,
+    String title,
+    Integer year,
+    String imgUrl,
+    String shortDescription
+) {
+  public static GameMinDTO fromGame(final Game game) {
+    return new GameMinDTO(
+        game.getId(),
+        game.getTitle(),
+        game.getYear(),
+        game.getImgUrl(),
+        game.getShortDescription()
+    );
+  }
 }
