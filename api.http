@@ -1,2 +1,4 @@
 GET http://localhost:8080/games
 
+###
+GET http://localhost:8080/games/1
