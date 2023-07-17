@@ -4,10 +4,11 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-public class BelongingPK {
+public class BelongingPK implements Serializable {
 
   @ManyToOne
   @JoinColumn(name = "game_id")

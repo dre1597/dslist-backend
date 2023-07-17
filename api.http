@@ -5,3 +5,7 @@ GET http://localhost:8080/games/1
 
 ###
 GET http://localhost:8080/game-lists
+
+###
+GET http://localhost:8080/game-lists/1/games
+
