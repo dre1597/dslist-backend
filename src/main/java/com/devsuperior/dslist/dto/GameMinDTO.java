@@ -24,7 +24,7 @@ public record GameMinDTO(
     return new GameMinDTO(
         projection.getId(),
         projection.getTitle(),
-        projection.getYear(),
+        projection.getGameYear(),
         projection.getImgUrl(),
         projection.getShortDescription()
     );
