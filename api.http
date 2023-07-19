@@ -7,5 +7,14 @@ GET http://localhost:8080/games/1
 GET http://localhost:8080/game-lists
 
 ###
-GET http://localhost:8080/game-lists/1/games
+GET http://localhost:8080/game-lists/2/games
 
+###
+
+POST http://localhost:8080/game-lists/2/replacement
+Content-Type: application/json
+
+{
+  "sourceIndex": 3,
+  "destinationIndex": 1
+}
